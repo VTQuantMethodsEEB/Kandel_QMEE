@@ -9,7 +9,7 @@ This repo contains all the information required for Quantitative methods in Ecol
 
 <p> #Week 2 Assignment
 
-<p> CODE : week2_Kandel_QMEE
+<p> CODE : Week2_Kandel_QMEE
 
 <p> DATA: project_data.csv
 
