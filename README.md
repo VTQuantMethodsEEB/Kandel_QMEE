@@ -8,14 +8,21 @@ This repo contains all the information required for Quantitative methods in Ecol
 
 
 <p> #Week 2 Assignment
-
 <p> CODE : Week2_Kandel_QMEE
-
 <p> DATA: project_data.csv
 
 Here, I practiced tidying the format of my data. I used group_by to take a mean of ET across seasons and also used mutate function to create an additional column to calculate ET from LE.
 
 #The end!
+
+<p> #Week 3 Assignment
+<p> CODE: Week3_Bibek_Kandel
+<p> DATA: project_data.csv
+
+This week, I tried to answer some of the fundamental questions about land-water-atmosphere water flux dynamics through data visualization using ggplot in R. These visualizations should help understand the preliminary relationships among flux and their drivers at various temporal scales.
+
+#The end!
+
 
 
 
