@@ -28,8 +28,7 @@ This week, I tried to answer some of the fundamental questions about land-water-
 <p> CODE: Week5_Bibek_Kandel
 <p> DATA: project_data.csv
 
-This week, I am going to formulate some hypotheses and test them against my project data using a mixture of classical and permutation test. Firstly, I hypothesized that my data is normally distributed. Second, the mean ET for the summer season is significantly higher than that for the spring season. The mean annual evapotranspiration for the year 2021 is significantly higher than that for 2017 owing to the increase in temperature and vapor pressure deficit following global warming. The increase in temperature and vapor pressure deficit is generally thought to 
-promote the rate of evaporation in light of global warming.
+This week, I am going to formulate some hypotheses and test them against my project data using a mixture of classical and permutation test. Firstly, I hypothesized that my data is normally distributed. Second, the mean ET for the summer season is significantly higher than that for the spring season. The mean annual evapotranspiration for the year 2021 is significantly higher than that for 2017 owing to the increase in temperature and vapor pressure deficit following global warming. The increase in temperature and vapor pressure deficit is generally thought to promote the rate of evaporation in light of global warming.
 
 #The end!
 
