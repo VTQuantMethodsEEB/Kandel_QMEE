@@ -33,6 +33,24 @@ This week, I am going to formulate some hypotheses and test them against my proj
 #The end!
 
 
+<p> #Week 7 & 8 Assignment
+<p> CODE: Week_7&8_Bibek_Kandel
+<p> DATA: project_data.csv
+
+This week, I am going to further investigate into the interesting results obtained in last week's analysis. Given the results showed statistically clear decline in the annual rate of ET, I am developing a uni-variate linear model using only net radiation and then other variables to test the hypothesis: The rate of fluxes is driven primarily by net radiation (Rn), temperature (Ta) and Vapor Pressure Deficit (VPD). The findings will help us understand the ecosystem response to changing meteorological conditions, ultimately contributing to better understand and manage natural resources in light of climate change. 
+
+#The end!
+
+
+
+
+
+
+
+
+
+
+
 
 
 
