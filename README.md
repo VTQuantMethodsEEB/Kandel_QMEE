@@ -41,9 +41,21 @@ This week, I am going to further investigate into the interesting results obtain
 
 #The end!
 
+<p> #Week 10 Assignment
+<p> CODE: Week_10&11_Bibek_Kandel
+<p> DATA: project_data.csv 
 
+This week, I am using generalized Additive Modeling (GAM) approach to test my hypothesis: The rate of fluxes is driven primarily by net radiation (Rn), temperature (Ta) and Vapor Pressure Deficit (VPD). As linear model couldn't explain much of the variation in fluxes driven by these factors (as hypothesized earlier), generalized linear models might be a better approach in understanding the interrelationships among them. 
 
+#The end!
 
+<p> #Week 11 Assignment
+<p> CODE: Week_10&11_Bibek_Kandel
+<p> DATA: project_data.csv 
+
+This week, I am using various model comparison and selection approaches to identify and select the best-fit models, given the data. I'll use Akaike's Information Criteria (AIC) and Likelihood Ratio Tests (LRT) approach to make decisions about the best-fit model. Also, I'll assess the model predictive performance to supplement the selection process. 
+
+#The end!
 
 
 
