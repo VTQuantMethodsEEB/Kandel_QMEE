@@ -57,6 +57,13 @@ This week, I am using various model comparison and selection approaches to ident
 
 #The end!
 
+<p> #Week 12 Assignment
+<p> CODE: Week_12_Bibek_Kandel
+<p> DATA: project_data.csv 
+
+This week, I am using mixed effects modeling approach to evaluate how the effects of net radiation on fluxes vary over seasons. I'll use Akaike's Information Criteria (AIC) approach to make decisions about the best-fit model. Also, I'll assess the model predictive performance to assess the model fit.
+
+#The end!
 
 
 
