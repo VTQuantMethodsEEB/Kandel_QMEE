@@ -65,11 +65,13 @@ This week, I am using mixed effects modeling approach to evaluate how the effect
 
 #The end!
 
+<p> #Presentation_week_assignment
+<p> CODE: Week_12_Bibek_Kandel
+<p> DATA: project_data.csv 
 
+Full presentation and brief results summary turned in. All the code used to generate the presentation results pushed to GitHub. Thanks!
 
-
-
-
+#The end!
 
 
 

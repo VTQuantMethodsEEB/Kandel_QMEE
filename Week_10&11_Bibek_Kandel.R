@@ -178,8 +178,10 @@ plot(ggeffects::ggpredict(mod_gam2), facets = TRUE)
 gratia::draw(mod_gam2)
 
 #Model comparison with linear model
-mod_lm2 <- gam(ET ~ Rn + Ta + VPD + H + Season, data = train)
+mod_lm2 <- lm(ET ~ Rn + Ta + VPD + H + Season, data = train)
 summary(mod_lm2)
+par(mfrow = c(2, 2))  # Split the plotting panel into a 2 x 2 grid
+plot(mod_lm2)
 
 #Model comparison
 anova(mod_lm2, mod_gam2, test = "F")
@@ -375,7 +377,7 @@ Error_GAM
 
 
 #SMOOTH FUNCTIONS FOR MULTIDIMENSIONAL INTERACTIONS WITH DIFFERENT SCALES
-#In the example below, above we are using a type of smooth called a tensor product smooth, and...
+#In the example below, we are using a type of smooth called a tensor product smooth, and...
 #...by smoothing the marginal smooths of predictors, we see a bit clearer story. Tensor product..
 #..smooths address the issue of modeling responses to interactions of multiple inputs with different units.
 
@@ -393,7 +395,7 @@ vis.gam(mod_gam, view=c("Rn","Ta"), theta = 45, n.grid = 50, lwd = 0.2)
 vis.gam(mod_gam, view=c("VPD","H"), theta = 45, n.grid = 50, lwd = 0.2)
 
 #Model comparisons among additive and interactive
-AIC(test_model4, test_model_int, mod_gam)
+AIC(mod_lm2, test_model4, test_model_int, mod_gam)
 
 #Error
 #GAM
@@ -417,33 +419,24 @@ fitted_test3$newdate <- strptime(as.character(fitted_test3$DateTime), "%m/%d/%Y"
 fitted_test3 <- fitted_test3 %>%
   group_by(newdate) %>%
   summarize(yhat_mean = mean(yhat),
-            ET_mean = mean(ET))
+            ET_mean = mean(ET),
+            temp = mean(Ta),
+            upper = quantile(yhat, 0.975),
+            lower = quantile(yhat, 0.025))
 
 library(ggbreak)
 ggplot(fitted_test3, aes(x = as.Date(newdate))) +
-  geom_point(aes(y = ET_mean), colour = "blue", alpha=0.2) +
-  geom_line(aes(y = yhat_mean), colour = "red") +
+  geom_point(aes(y = ET_mean), colour = "blue", alpha=0.5) +
+  geom_line(aes(y = yhat_mean), colour = "red",linewidth = 0.9) +
+  geom_ribbon(aes(ymin = lower, ymax = upper), alpha = 0.5) +
   labs(title = "Time series of predicted fluxes using Generalized Additive Models
-       (Data available only for 2017 and 2021)", x = "Year-month", y = "ET") +
-  theme_classic()+
+(Data available only for 2017 and 2021)", x = "Year-month", y = "Flux (umol/m2.s)") +
   ggbreak::scale_x_break(c(ymd("2017-12-25"), ymd("2021-01-24")))+
-  scale_x_date(date_breaks = "6 months", date_labels = "%Y-%m")
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+  scale_x_date(date_breaks = "6 months", date_labels = "%Y-%m") +
+  #geom_line(aes(y = temp), colour = "purple",linewidth = 0.9) +
+  scale_y_continuous(sec.axis = sec_axis(~.*100, name="Temperature (degC)"))+
+  theme_bw()
+  #geom_hline(yintercept=0.21, linetype="dashed", color = "black", size=1)
 
 
 
