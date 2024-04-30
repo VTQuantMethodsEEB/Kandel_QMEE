@@ -48,6 +48,6 @@ ggplot(data = points,
        subtitle = "Subtitle: temperature affecting respiration",
        x = "my x axis and unit = degree celcius",
        y = "my y axis and unit = umol/m2/day",
-       caption = "by bibek kandel",
+       caption = "by me",
        col = "Legend at bottom")
 
